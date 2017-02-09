@@ -57,4 +57,12 @@ endif
 DIRS += testAsynPortClientApp
 testAsynPortClientApp_DEPEND_DIRS = asyn
 
+DIRS += opi
+
+ifeq ($(EPICS_HOST_ARCH),linux-x86_64)
+DIRS += documentation
+DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard etc))
+# Comment out the following line to disable building of example iocs
+DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard iocs))
+endif
 include $(TOP)/configure/RULES_TOP

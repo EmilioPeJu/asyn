@@ -1,13 +1,10 @@
 #RELEASE Location of external products
-
-SUPPORT=/dls_sw/prod/R3.14.12.3/support
-
 #  IPAC is only necessary if support for Greensprings IP488 is required
 #  IPAC release V2-7 or later is required.
-#IPAC=$(SUPPORT)/ipac-2-12
-
-# SEQ is required for testIPServer
-#SNCSEQ=$(SUPPORT)/seq/2-0-12dls2
-
+#IPAC=J:/epics/devel/ipac/2-9beta
+#SNCSEQ=J:/epics/devel/seq/2-0-11
 #  EPICS_BASE 3.14.6 or later is required
-EPICS_BASE=/dls_sw/epics/R3.14.12.3/base
+SUPPORT=W:/prod/R3.14.12.3/support
+#SNCSEQ=$(SUPPORT)/seq/2-0-12dls2
+LINUX_GPIB=NO
+EPICS_BASE=W:/epics/R3.14.12.3/base

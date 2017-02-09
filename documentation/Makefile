@@ -8,17 +8,18 @@ all: asynDriver.pdf asynRecord.pdf devGpib.pdf doxygen install
 doxygen:
 	doxygen
 
-install:
+install: doxygen
 	mkdir -p ../html
-	cp *.html ../html
-	cp *.jpg ../html
-	cp *.png ../html
-	cp *.pdf ../html
-	cp -r asynDoxygenHTML ../html
+	cp -f *.html ../html
+	cp -f *.jpg ../html
+	cp -f *.png ../html
+	cp -f *.pdf ../html
+	cp -f -r asynDoxygenHTML ../html
 	mkdir -p ../html/gpibCoreConversion ; cp gpibCoreConversion/*html gpibCoreConversion/*css ../html/gpibCoreConversion
 	mkdir -p ../html/HowToDoSerial ; cp HowToDoSerial/*.html ../html/HowToDoSerial
 
 clean:
+	rm -rf asynDoxygenHTML
 
 realclean: clean
 	rm -f *.pdf

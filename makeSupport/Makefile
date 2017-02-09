@@ -43,6 +43,6 @@ TEMPLATES += streamSCPI/_NAME_Sup/dev_NAME_.proto
 TEMPLATES += streamSCPI/_NAME_Sup/dev_NAME_.db
 TEMPLATES += streamSCPI/documentation/dev_NAME_.html
 
-SCRIPTS_HOST += makeSupport.pl
+SCRIPTS_HOST += ../makeSupport.pl
 
 include $(TOP)/configure/RULES
