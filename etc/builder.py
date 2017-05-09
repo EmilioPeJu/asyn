@@ -87,7 +87,7 @@ class _AsynOctetInterface(AsynPort):
         bits          = Simple('Bits', int),
         parity        = Simple('Parity', str),
         stop          = Simple('Stop Bits', int),
-        crtscts       = Simple('Set hardware flow control on', int))
+        crtscts       = Simple('Set hardware flow control on', str))
 
 class AsynSerial(_AsynOctetInterface):
     '''Asyn Serial Port'''
