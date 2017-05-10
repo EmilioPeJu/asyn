@@ -84,10 +84,10 @@ class _AsynOctetInterface(AsynPort):
         simulation    = Simple('IP port to connect to if in simulation mode', str),
         # SetOption keys        
         baud          = Simple('Baud Rate', int),
-        bits          = Simple('Bits', int),
-        parity        = Simple('Parity', str),
-        stop          = Simple('Stop Bits', int),
-        crtscts       = Simple('Set hardware flow control on', str))
+        bits          = Choice('Bits', [8,7,6,5]), 
+        parity        = Choice('Parity', ['none','even','odd']),
+        stop          = Choice('Stop Bits', [1,2]),
+        crtscts       = Choice('Set hardware flow control on', ['N','Y']))
 
 class AsynSerial(_AsynOctetInterface):
     '''Asyn Serial Port'''
