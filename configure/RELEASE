@@ -1,6 +1,6 @@
 #RELEASE Location of external products
 
-SUPPORT=/dls_sw/prod/R3.14.12.3/support
+SUPPORT=/dls_sw/prod/R3.14.12.7/support
 
 #  IPAC is only necessary if support for Greensprings IP488 is required
 #  IPAC release V2-7 or later is required.
@@ -10,5 +10,5 @@ SUPPORT=/dls_sw/prod/R3.14.12.3/support
 #SNCSEQ=$(SUPPORT)/seq/2-0-12dls2
 
 #  EPICS_BASE 3.14.6 or later is required
-EPICS_BASE=/dls_sw/epics/R3.14.12.3/base
+EPICS_BASE=/dls_sw/epics/R3.14.12.7/base
 
