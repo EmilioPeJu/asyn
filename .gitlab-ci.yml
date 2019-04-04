@@ -1,5 +1,4 @@
-
-buildserver-build:
+rhel7_job:
   tags:
   - rhel7
   script:
