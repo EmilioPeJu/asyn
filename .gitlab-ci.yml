@@ -10,7 +10,7 @@ rhel7_job:
      cat > configure/RELEASE.${EPICS_HOST_ARCH} <<EOF
      EPICS_BASE=${EPICS_BASE}
      SUPPORT=/dls_sw/prod/$(echo $_epics | cut -d_ -f1)/support
-     EOF
+     <<EOF
      
   - cp configure/RELEASE.${EPICS_HOST_ARCH} configure/RELEASE.${EPICS_HOST_ARCH}.Common
 
