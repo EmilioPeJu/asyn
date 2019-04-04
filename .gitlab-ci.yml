@@ -6,12 +6,9 @@ rhel7_job:
   - git cat-file -p HEAD:configure/RELEASE > configure/RELEASE.vcs
   - rm configure/RELEASE
   - sed -e 's,^ *EPICS_BASE *=.*$,EPICS_BASE='$EPICS_BASE',' -e 's,^ *SUPPORT *=.*$,SUPPORT=/dls_sw/prod/'$(echo $_epics | cut -d_ -f1)'/support,' -e 's,^ *WORK *=.*$,#WORK=commented out to prevent prod modules depending on work modules,' configure/RELEASE.vcs > configure/RELEASE
-  - > 
-     cat > configure/RELEASE.${EPICS_HOST_ARCH} <<EOF
-     EPICS_BASE=${EPICS_BASE}
-     SUPPORT=/dls_sw/prod/$(echo $_epics | cut -d_ -f1)/support
-     <<EOF
-     
+  - echo "EPICS_BASE=${EPICS_BASE}" >> configure/RELEASE.${EPICS_HOST_ARCH}
+  - echo "SUPPORT=/dls_sw/prod/$(echo $_epics | cut -d_ -f1)/support" >> configure/RELEASE.${EPICS_HOST_ARCH}
+  - cat configure/RELEASE.${EPICS_HOST_ARCH}  
   - cp configure/RELEASE.${EPICS_HOST_ARCH} configure/RELEASE.${EPICS_HOST_ARCH}.Common
 
   script:
