@@ -1,0 +1,6 @@
+
+buildserver-build:
+  tags:
+  - rhel7
+  script:
+  - make
