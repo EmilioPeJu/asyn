@@ -1,0 +1,3 @@
+gitlab	ssh://git@gitlab.diamond.ac.uk/controls/support/asyn.git
+dls-controls git@github.com:dls-controls/asyn.git
+upstream git@github.com:epics-modules/asyn.git
