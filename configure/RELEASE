@@ -9,6 +9,10 @@ SUPPORT=/dls_sw/prod/R3.14.12.7/support
 # SEQ is required for testIPServer
 #SNCSEQ=$(SUPPORT)/seq/2-0-12dls2
 
+## for sCalcout support in asynOctet - applications include asynCalc.dbd
+#CALC=$(SUPPORT)/calc-3-7-7
+#SSCAN=$(SUPPORT)/sscan-2-11-3
+
 #  EPICS_BASE 3.14.6 or later is required
 EPICS_BASE=/dls_sw/epics/R3.14.12.7/base
 
