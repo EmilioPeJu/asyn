@@ -1,3 +1,4 @@
+from __future__ import print_function
 import os.path
 
 from iocbuilder import Device, SetSimulation
@@ -59,19 +60,19 @@ class _AsynOctetInterface(AsynPort):
         self.__super.__init__(name)    
                
     def Initialise(self):
-        print '%sConfigure("%s", "%s", %d, %d, %d)' % (
+        print('%sConfigure("%s", "%s", %d, %d, %d)' % (
             self.DbdFileList[0], self.asyn_name, self.port_name, self.priority,
-            self.noAutoConnect, self.noProcessEos)    
+            self.noAutoConnect, self.noProcessEos))
         for key, value in self.options.items():
-            print 'asynSetOption("%s", 0, "%s", "%s")' % (
-                self.asyn_name, key, value)
+            print('asynSetOption("%s", 0, "%s", "%s")' % (
+                self.asyn_name, key, value))
         if self.input_eos is not None:
-            print 'asynOctetSetInputEos("%s", 0, %s)' % (
-                self.asyn_name, quote_c_string(self.input_eos))
+            print('asynOctetSetInputEos("%s", 0, %s)' % (
+                self.asyn_name, quote_c_string(self.input_eos)))
         if self.output_eos is not None:
-            print 'asynOctetSetOutputEos("%s", 0, %s)' % (
-                self.asyn_name, quote_c_string(self.output_eos))
-                                
+            print('asynOctetSetOutputEos("%s", 0, %s)' % (
+                self.asyn_name, quote_c_string(self.output_eos)))
+
     # __init__ attributes
     ArgInfo = makeArgInfo(__init__, ValidSetOptionKeys,
         port          = Simple('Serial port tty name / IP address optionally followed by protocol', str),
@@ -128,10 +129,10 @@ class Vxi11(_AsynOctetInterface):
         self.__super.__init__(port, name, **kwargs)    
                
     def Initialise(self):
-        print 'vxi11Configure("%s", "%s", %d, %s, "%s", %d, %d)' % (
-            self.asyn_name, self.port_name, self.flags, self.timeout, 
-            self.vxiName, self.priority, self.noAutoConnect)    
-                                
+        print('vxi11Configure("%s", "%s", %d, %s, "%s", %d, %d)' % (
+            self.asyn_name, self.port_name, self.flags, self.timeout,
+            self.vxiName, self.priority, self.noAutoConnect))
+
     # __init__ attributes
     ArgInfo = makeArgInfo(__init__,
         port          = Simple('IP address', str),
