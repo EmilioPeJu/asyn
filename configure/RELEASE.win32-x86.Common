@@ -4,7 +4,7 @@
 #IPAC=J:/epics/devel/ipac/2-9beta
 #SNCSEQ=J:/epics/devel/seq/2-0-11
 #  EPICS_BASE 3.14.6 or later is required
-SUPPORT=W:/prod/R3.14.12.3/support
+SUPPORT=W:/prod/R3.14.12.7/support
 #SNCSEQ=$(SUPPORT)/seq/2-0-12dls2
 LINUX_GPIB=NO
-EPICS_BASE=W:/epics/R3.14.12.3/base
+EPICS_BASE=W:/epics/R3.14.12.7/base
